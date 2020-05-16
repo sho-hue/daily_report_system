@@ -11,7 +11,7 @@ import javax.persistence.NamedQueries;
 import javax.persistence.NamedQuery;
 import javax.persistence.Table;
 
-@Table(name="empoloyees")
+@Table(name="employees")
 @NamedQueries({
 	@NamedQuery(
 		name="getAllEmployees",
@@ -22,7 +22,7 @@ import javax.persistence.Table;
 		query="SELECT COUNT(e) FROM Employee AS e"
 			),
 	@NamedQuery(
-		name="checkResisterCode",
+		name="checkRegisteredCode",
 		query="SELECT COUNT(e) FROM Employee AS e WHERE e.code = :code"
 		),
 	@NamedQuery(
