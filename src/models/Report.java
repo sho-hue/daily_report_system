@@ -39,7 +39,7 @@ public class Report {
 
 	@ManyToOne
 	@JoinColumn(name = "employee_id", nullable = false)
-	private Employee employee_id;
+	private Employee employee;
 
 	@Column(name = "report_date", nullable = false)
 	private Date report_date;
@@ -52,7 +52,7 @@ public class Report {
 	private String content;
 
 	@Column(name="created_at",nullable = false)
-	private String created_at;
+	private Timestamp created_at;
 
 	@Column(name="updated_at", nullable=false)
 	private Timestamp updated_at;
@@ -65,12 +65,12 @@ public class Report {
 		this.id = id;
 	}
 
-	public Employee getEmployee_id() {
-		return employee_id;
+	public Employee getEmployee() {
+		return employee;
 	}
 
-	public void setEmployee_id(Employee employee_id) {
-		this.employee_id = employee_id;
+	public void setEmployee(Employee employee) {
+		this.employee = employee;
 	}
 
 	public Date getReport_date() {
@@ -97,11 +97,11 @@ public class Report {
 		this.content = content;
 	}
 
-	public String getCreated_at() {
+	public Timestamp getCreated_at() {
 		return created_at;
 	}
 
-	public void setCreated_at(String created_at) {
+	public void setCreated_at(Timestamp created_at) {
 		this.created_at = created_at;
 	}
 
